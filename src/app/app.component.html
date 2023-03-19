@@ -1,12 +1,12 @@
-<div style="text-align:center">
+<div style="text-align:center; align-items: center;">
   <mat-toolbar>
     LocalCast Weather
   </mat-toolbar>
   <div>Your city, your forecast, right now!</div>
   <div>
-    <app-city-search></app-city-search>
+    <app-city-search (searchEvent)="doSearch($event)"></app-city-search>
   </div>
-  <mat-card style="max-width:400px">
-    <app-current-weather></app-current-weather>
+  <mat-card style="max-width:400px;margin-left:250px;margin-top: 50px;">
+    <app-current-weather [current]="currentWeather"></app-current-weather>
   </mat-card>
 </div>
